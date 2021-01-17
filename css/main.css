@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  text-align: center;
+}
+button {
+  font-size: 22px;
+  margin: 50px auto;
+  padding: 10px 20px;
+  background-color: #f00;
+  color: #fff;
+  border: 1px solid #f00;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+button.selected {
+  background-color: #080;
+  border-color: #080;
+}

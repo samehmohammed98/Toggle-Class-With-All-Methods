@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Vue Calculate Product</title>
+</head>
+<body>
+  <div id="vue-test" class="container">
+
+    <button @click='isSelected = !isSelected' :class="{selected: isSelected}">One Methods</button>
+
+    <button @click='toggle'>Two Methods</button>
+    
+    <button @click='toggleAdvanced($event, "selected")'>Three Methods</button>
+  </div>
+
+  <script src="js/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#vue-test',
+      data: {
+        isSelected: false
+      },
+      methods: {
+        toggle: function(e) {
+          e.target.classList.toggle("selected");
+        },
+        toggleAdvanced: function(e, theClass) {
+          e.target.classList.toggle(theClass);
+        }
+      },
+    });
+  </script>
+</body>
+</html>
